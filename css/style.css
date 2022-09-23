@@ -27,7 +27,6 @@ html, body{
 
 main {
     width: 50%;
-    height: 70vh;
     margin: 0 auto;
     overflow: hidden;
     background: white;
@@ -48,19 +47,19 @@ main {
     font-family: var(--font1);
     color: var(--color4);
     padding: 5%;
+    display: grid;
 }
 
 .productType {
     font-weight: 100;
     letter-spacing: 10px;
     font-size: 15px;
-    padding: 10px 0;
 }
 
 .productTitle {
     font-family: var(--font2);
     font-size: 3em;
-    margin: 5% 0;
+    margin: 3% 0;
     color: var(--color3);
 }
 .productDesc{
@@ -71,10 +70,10 @@ main {
 /* Precio */
 #productPrice {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: min-content auto;
     align-items: center;
-    padding: 6% 0;
-    gap: 15px;
+    padding: 5% 0;
+    gap: 10px;
 }
 
 .currentPrice {
