@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+
+:root{
+    --color1:hsl(158, 36%, 37%);
+    --color2:hsl(30, 38%, 92%);
+    --color3:hsl(212, 21%, 14%);
+    --color4:hsl(228, 12%, 48%);
+    --color5:hsl(0, 0%, 100%);
+    --font1: 'Montserrat', sans-serif;
+    --font2:  'Fraunces', serif;;
+}
+
+html, body{
+    margin: 0;
+    font-size: 16px;
+    background-color: var(--color2);
+    font-family: var(--font1);
+    display: grid;
+    align-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Main */
+
+main {
+    width: 50%;
+    height: 70vh;
+    margin: 0 auto;
+    overflow: hidden;
+    background: white;
+    border-radius: 10px;
+    align-self: center;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+/* Image */
+
+#boxImg img {height: 100%;width: 100%;}
+#boxImg {overflow: hidden;width: 100%;}
+
+
+/* Text */
+#productInfo {
+    font-family: var(--font1);
+    color: var(--color4);
+    padding: 5%;
+}
+
+.productType {
+    font-weight: 100;
+    letter-spacing: 10px;
+    font-size: 15px;
+    padding: 10px 0;
+}
+
+.productTitle {
+    font-family: var(--font2);
+    font-size: 3em;
+    margin: 5% 0;
+    color: var(--color3);
+}
+.productDesc{
+    font-weight: 300;
+    max-width: 80%;
+}
+
+/* Precio */
+#productPrice {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    padding: 6% 0;
+    gap: 15px;
+}
+
+.currentPrice {
+    font-size: 3em;
+    font-family: var(--font2);
+    color: var(--color1);
+}
+.normalPrice {text-decoration: line-through;}
+
+/* Botón */
+.addCart {
+    background-color: var(--color1);
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    width: 80%;
+    min-height: 50px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    margin:  0 auto;
+}
+
+.addCart:hover {
+    cursor: pointer;
+    background-color: hsl(158deg 54% 21%);
+}
+
+.addCart img {justify-self: right;}
+.addCart span {text-align: start;}
+
+@media (max-width:600px){
+    main {
+    grid-template-columns: unset;
+    width: 90%;
+    height: unset;
+    }
+
+    #boxImg {height: 30vh;}
+    .addCart {margin: 0 auto;}
+}
